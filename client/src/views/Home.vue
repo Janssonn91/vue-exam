@@ -1,20 +1,17 @@
 <template>
-  <div class="home text-center">
-    <div class="jumbotron">
-      <h1 class="display-3">Authentication for Newbs</h1>
-      <p class="lead">
-        Learning Auth is fun! 🔐 🎉
-      </p>
-      <hr class="my-4">
-      <p>
-        CJ and Tony are a great team (most days...)
-      </p>
-      <p class="lead">
+  <div class="text-center">
+    <div class="jumbotron m-0 rounded">
+      <h2 class="mb-3">Welcome to the magical place of auth (hoth?)</h2>
+      <p class="lead">Learning Javascript is fun!</p>
+      <hr class="my-4"/>
         <router-link
-          class="btn btn-primary btn-lg"
+          class="btn btn-primary mr-5 rounded-button"
           :to="{ name: 'signup' }"
           role="button">Sign Up</router-link>
-      </p>
+        <router-link
+          class="btn btn-primary rounded-button"
+          :to="{ name: 'login' }"
+          role="button">Log in</router-link>
     </div>
   </div>
 </template>
@@ -25,3 +22,15 @@ export default {
   name: 'home',
 };
 </script>
+
+<style>
+
+.rounded {
+  border-radius: .75rem!important;
+}
+
+.rounded-button {
+  border-radius: .3rem!important;
+}
+
+</style>
