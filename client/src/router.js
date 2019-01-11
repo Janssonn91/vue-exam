@@ -25,6 +25,8 @@ function isLoggedIn(to, from, next) {
 
 
 export default new Router({
+  mode: 'history',
+  hash: false,
   routes: [
     {
       path: '/',
@@ -49,5 +51,6 @@ export default new Router({
       component: Dashboard,
       beforeEnter: isLoggedIn,
     },
+    { path: '*', redirect: '/' }, // catch all use case
   ],
 });
