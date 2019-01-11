@@ -1,1 +1,1 @@
-vue-webshop
+vue-auth
