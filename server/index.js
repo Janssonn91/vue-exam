@@ -1,5 +1,4 @@
 const express = require('express');
-const volleyball = require('volleyball');
 const cors = require('cors');
 
 require('dotenv').config();
@@ -10,7 +9,6 @@ const middlewares = require('./auth/middlewares');
 const auth = require('./auth');
 const notes = require('./api/notes');
 
-app.use(volleyball);
 app.use(cors({
   origin: 'http://localhost:8080'
 }));
