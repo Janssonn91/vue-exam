@@ -15,6 +15,13 @@ app.use(cors({
 app.use(express.json());
 app.use(middlewares.checkTokenSetUser);
 
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Hello World',
+    user: req.user,
+  });
+});
+
 app.use('/auth', auth);
 app.use('/api/v1/notes', middlewares.isLoggedIn, notes);
 

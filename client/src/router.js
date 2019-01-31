@@ -51,6 +51,6 @@ export default new Router({
       component: Dashboard,
       beforeEnter: isLoggedIn,
     },
-    { path: '*', redirect: '/' }, // catch all use case
+    { path: '*', redirect: '/' },
   ],
 });
